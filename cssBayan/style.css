@@ -11,6 +11,7 @@ body {
   font-size: 10px;
 }
 
+/* Section memes */
 .memes {
   padding: 0 300px;
 }
@@ -24,17 +25,9 @@ body {
   animation: shows 0.5s;
 }
 
-input[type=radio]:checked + label .open-icons{
-  /* display: block; */
-  transform: rotate(45deg);
-  animation: shows 0.5s;
+.meme input[type=radio] {
+	display: none;
 }
-
-/* input[type=radio]:checked + label .open-icons{
-  display: block;
-  transform: rotate(45deg);
-  animation: shows 0.5s;
-} */
 
 h1 {
   color: rgb(59, 34, 0);
@@ -43,10 +36,17 @@ h1 {
   font-size: 2.5rem;
 }
 
+.decoration-line {
+  display: block;
+  height: 1px;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
 .meme__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 h3 {
@@ -58,7 +58,6 @@ h3 {
 }
 
 .open-icons {
-  /* display: inline-block; */
   background-image: url('img/plus-svgrepo-com.svg');
   width: 40px;
   height: 40px;
@@ -66,85 +65,59 @@ h3 {
 }
 
 .close-icons {
-  /* display: inline-block; */
   background-image: url('img/plus-svgrepo-com.svg');
   width: 40px;
   height: 40px;
   display: none;
 }
 
-.image__container {
+input[type=radio]:checked + label .open-icons{
+  transform: rotate(45deg);
+  animation: shows 0.5s;
+}
+
+.meme__img-container {
   cursor: pointer;
+  display: none;
+  transition: 0.3s ease-out;
   padding-bottom: 30px;
 }
 
-.decoration-line {
-  display: block;
-  height: 1px;
-  background-color: rgb(0, 0, 0, 0.2);
-}
-
-.radio_btn {
-  display: block;
-}
-
-img {
+.meme__img {
   width: 400px;
 }
 
-.image__container {
-  display: none;
-  transition: 0.3s ease-out;
-}
-
-.radio_btn input[type=radio] {
-	display: none;
-}
-
-/* Checked */
-input[type=radio]:checked + label .image__container{
+/* Checked radio*/
+input[type=radio]:checked + label .meme__img-container{
   cursor: pointer;
 	display: flex;
   justify-content: center;
   animation: shows 0.5s;
 
-}
-
-/* input[type=radio]:checked + label .open-icons{
-  display: block;
-  transform: rotate(45deg);
-  animation: shows 0.5s;
-} */
-
-/* Disabled */
-input[type=radio]:disabled + label .image__container{
-  display: none;
 }
 
 /* Hover */
-input[type=radio]:hover + label .image__container{
+input[type=radio]:hover + label .meme__img-container{
   cursor: pointer;
 	display: flex;
   justify-content: center;
   animation: shows 0.5s;
 }
 
-/* input[type=radio]:hover + label .open-icons{
-  display: block;
-  animation: shows 0.5s;
-} */
-
-@keyframes shows {
-  from {
-  opacity: 0;
-  }
-  to {
-  opacity: 1;
-  }
- }
-
-
-
- footer {
+footer {
   height: 100px;
  }
+
+/* Animation */
+@keyframes shows {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+ }
+
+ 
+
+
