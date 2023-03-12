@@ -88,7 +88,7 @@ input[type=radio]:checked + label .open-icons{
 }
 
 .meme__img {
-  width: 40rem;
+  width: 25rem;
 }
 
 /* Checked radio*/
@@ -161,7 +161,7 @@ footer {
   }
   
   .meme__img {
-    width: 35rem;
+    width: 20rem;
   }
 
   /* Hover */
@@ -232,7 +232,7 @@ footer {
   }
 
   .meme__img {
-    width: 28rem;
+    width: 15rem;
   }
 
   footer {
